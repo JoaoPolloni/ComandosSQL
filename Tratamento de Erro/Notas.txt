@@ -1,0 +1,51 @@
+•Cada bloco de PL/SQL possui uma área específica para tratamento de erro.
+• Toda vez que ocorre um erro no programa, a sequência de execução é 
+interrompida e o controle é transferido para esta área especial
+do bloco onde ocorre o erro foi adquirido
+•Os erros, em um programa PL/SQL, são chamados de EXCEPTIONS.
+• As Exceptions correspondem a erros predefinidos,
+como por exemplo No_Data_Found, ou a erros definidos pelo usuário.
+• Os erros predefinidos são de conhecimento do Oracle,
+já os erros dos usuários não são percebidos pela
+PL/SQL, a não ser que o programa explicitamente cause o erro
+• A principal vantagem da utilização de exceptions é a legibilidade dos programas.
+• Podemos isolar todo o tratamento de erros da parte lógica normal a ser executada.
+• Outra vantagem é a possibilidade de darmos tratamento único a erros ocorridos em pontos
+diferentes do programa.
+• NO_DATA_FOUND – 
+uma instrução SELECT INTO não retorna linhas, ou seu programa referencia um elemento deletado na
+tabela ou então um elemento não inicializado em um índice por tabela.
+• ZERO_DIVIDE -
+uma operação matemática no bloco executou uma divisão por zero.
+• INVALID_NUMBER – 
+falha na conversão de um caracter string para um numero (numa instrução SQL) porque a string não
+representa um número válido, numa instrução procedural VALUE_ERROR é chamada.
+• TOO_MANY_ROWS - 
+uma instrução SELECT INTO retorna mais de uma linha.
+• ACCESS_INTO_NULL – 
+tentativa de passar valores paraatributos de um objeto não inicializado.
+• CURSOR_ALREADY_OPEN – 
+tentativa de abrir um cursorjá aberto.
+• DUP_VAL_ON_INDEX – 
+tentativa de inserir um valorduplicado na tabela numa coluna com UNIQUE KEY.
+• INVALID_CURSOR - 
+tentativa de realizar uma operação com um cursor inexistente ou fechado.
+• LOGIN_DENIED - 
+tentativa de logar no Oracle com um usuário ou senha inválidos.
+• NOT_LOGGED_ON - 
+tentativa de fazer uma chamada ao banco sem estar conectado ao Oracle.
+• PROGRAM_ERROR – 
+erro interno do PL/SQL.
+• ROWTYPE_MISMATCH – 
+o host da variável de cursor e a variável de cursor do PL/SQL envolvidos são incompatíveis com
+os tipos retornados.
+• STORAGE_ERROR – 
+falha ao armazenar os dados na memória, tanto por falta como por estar corrompida.
+• TIMEOUT_ON_RESOURCE – 
+ocorreu um time-out enquanto o Oracle aguarda por um recurso.
+• VALUE_ERROR – 
+uma conta, conversão, truncamento ou tamanho de constraint com formato numérico
+inválido. Numa instrução procedural VALUE_ERROR é retornada se uma conversão de caracter ou string em
+número falha. Numa instrução SQL esse mesmo erro é retornado como INVALID_NUMBER.
+• OTHERS – 
+outro erro que não esteja sendo tratado.
